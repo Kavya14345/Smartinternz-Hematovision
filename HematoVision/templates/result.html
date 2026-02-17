@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HematoVision - Result</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f4f4f4; display: flex; justify-content: center; padding: 20px; }
+        .card { background: white; width: 100%; max-width: 600px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); overflow: hidden; text-align: center; }
+        .header { background-color: #e74c3c; color: white; padding: 15px; font-size: 24px; font-weight: bold; }
+        .result-body { padding: 30px; }
+        .prediction-text { font-size: 18px; margin-bottom: 20px; }
+        .prediction-text span { font-weight: bold; }
+        .cell-image { max-width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); }
+        .footer-action { background-color: #f8f8f8; padding: 15px; border-top: 1px solid #eee; }
+        .btn-back { background-color: #e74c3c; color: white; text-decoration: none; padding: 10px 20px; border-radius: 5px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">Prediction Result</div>
+        <div class="result-body">
+            <p class="prediction-text"><b>Predicted Class:</b> {{ class_label }}</p>
+            <img src="data:image/png;base64,{{ img_data }}" alt="Predicted Blood Cell" class="cell-image">
+        </div>
+        <div class="footer-action">
+            <a href="/" class="btn-back">Upload Another Image</a>
+        </div>
+    </div>
+</body>
+</html>

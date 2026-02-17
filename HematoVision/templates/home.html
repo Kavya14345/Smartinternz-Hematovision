@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HematoVision</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content-section {
+            padding: 30px;
+        }
+        h2 {
+            color: #e74c3c;
+            margin-top: 0;
+        }
+        .description {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+        .predict-section {
+            text-align: center;
+        }
+        .upload-form {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .btn-predict {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn-predict:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        Welcome to the HematoVision
+    </div>
+
+    <div class="content-section">
+        <h2>About Blood Cells</h2>
+        <p class="description">
+            Blood cells are vital components of our body, playing essential roles in immunity, oxygen transport, and clotting. 
+            Understanding different types of blood cells is crucial for diagnosing various medical conditions.
+        </p>
+
+        <div class="predict-section">
+            <h2 style="text-align: center;">Predict Blood Cell Type</h2>
+            <p>Upload an image of a blood cell to determine its type using our state-of-the-art classification model.</p>
+            
+            <form action="/" method="post" enctype="multipart/form-data" class="upload-form">
+                <input type="file" name="file" accept="image/*" required>
+                <button type="submit" class="btn-predict">Predict</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
